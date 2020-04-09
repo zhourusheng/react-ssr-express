@@ -25,8 +25,3 @@ app.get('/', (req, res) => {
 app.listen(3003, () => {
   console.log('listening at 3003...')
 })
-
-// @babel/core 核心包
-// @babel/preset-env 解析es的包,智能识别当前运行环境并进行转换
-// @babel/preset-react 解析jsx的包
-// @babael/plugin-transform-runtime 使es6中的api类似generator,promise对象等生效
