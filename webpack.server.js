@@ -6,7 +6,7 @@ const config = require('./webpack.base.js')
 const serverConfig = {
   target: 'node',
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/server/index.js',
   output: {
     filename: 'dist.js',
     path: path.resolve(__dirname, 'dist')

@@ -1,7 +1,7 @@
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import Home from './components/Home'
+import Home from '../components/Home'
 
 const app = express()
 // express static 中间件
