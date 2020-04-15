@@ -4,6 +4,9 @@ import { renderToString } from 'react-dom/server'
 import Home from './components/Home'
 
 const app = express()
+// express static 中间件
+app.use(express.static('public'))
+
 const content = renderToString(<Home />)
 
 app.get('/', (req, res) => {
@@ -16,7 +19,8 @@ app.get('/', (req, res) => {
       <title>React SSR</title>
     </head>
     <body>
-      ${content}
+      <div id="root">${content}</div>
+      <script src='./index.js'></script>
     </body>
   </html>
   `)

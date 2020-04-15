@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:**",
     "dev:start": "nodemon --watch dist --exec \"node ./dist/dist.js\"",
-    "dev:build": "webpack --watch",
+    "dev:build:server": "webpack --config webpack.server.js --watch",
+    "dev:build:client": "webpack --config webpack.client.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -25,6 +26,7 @@
     "react-dom": "^16.13.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   }
 }
